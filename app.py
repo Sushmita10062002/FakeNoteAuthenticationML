@@ -16,7 +16,6 @@ import pickle
 app = Flask(__name__)
 pickle_in = open("classifier.pkl","rb")
 classifier = pickle.load(pickle_in)
-run_with_ngrok(app)
 @app.route("/", methods=["GET"])
 def home():
   return render_template("index.html")
